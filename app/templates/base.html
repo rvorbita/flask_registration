@@ -11,6 +11,12 @@
 <body>
 
     <div id="container">
+
+        <div id="heads">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('login') }}">Login</a>
+        </div>
+
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         <ul>
@@ -20,7 +26,7 @@
         </ul>
         {% endif %}
         {% endwith %}
-        
+
         {% block content %}{% endblock %}
     </div>
 
